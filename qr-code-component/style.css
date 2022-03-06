@@ -13,6 +13,7 @@
     height: 80vh;
   }
   .content {
+      margin-top: 1rem;
       background-color: hsl(0, 0%, 100%);
       box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
       border-radius: 25px;
