@@ -1,9 +1,7 @@
 ### QR CODE COMPONENT - FRONTEND MENTOR SOLUTION
 
-![Solution]<img src="C:\Users\sabari vasan\OneDrive\Pictures\fm\screenshot.png" alt="">
+![Desktop view](./solution_screenshot/Desktop%20Design.png)
 
-### Built with
+![Mobile View](./solution_screenshot/Mobile%20Design.png)
 
 
-<ul> HTML </ul>
-<ul> CSS </ul>
