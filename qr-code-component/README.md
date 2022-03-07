@@ -10,12 +10,15 @@
 
 
 ### Solution
-Markup :     * Solution URL : [Github](https://github.com/Sabari2002/Frontend-mentors/tree/main/qr-code-component/solution_screenshot)
-             * Live Site URL : [QRcode](https://qrcode-zeta.vercel.app/)
+* Solution URL : [Github](https://github.com/Sabari2002/Frontend-mentors/tree/main/qr-code-component/solution_screenshot)
+
+* Live Site URL : [QRcode](https://qrcode-zeta.vercel.app/)
      
 ### Built with
-Markup :    * Semantic HTML5 Markup
-            * CSS custom properties
-            * Media queries
+* Semantic HTML5 Markup
+
+* CSS custom properties
+            
+* Media queries
 
 
