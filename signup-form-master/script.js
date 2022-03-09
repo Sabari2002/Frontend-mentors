@@ -1,57 +1,22 @@
-const form = document.getElementById('form');
+const inputs = document.getElementsByTagName('input');
 
-form.addEventListener('submit', e =>{
-    e.preventDefault();
-
-    const firstName = form['firstname'].value;
-    const lastName = form['lastname'].value;
-    const email = form['email'].value;
-    const password = form['password'].value;
-
-    if (firstName === '') {
-        addError('firstname','First Name is required');
-    }else{
-        removeError('firstname');
+function validateInputs() {
+    for (let i=0; i< inputs.length; i++) {
+        inputs[i].addEventListener('blur', function () {
+            const error = document.getElementsByClassName('error');
+            const errorIcon = document.getElementsByClassName('error-icon');
+            
+            if (!this.value) {
+                this.classList.add('invalid');
+                error[i].classList.add('visible');
+                errorIcon[i].classList.add('visible');
+            } else {
+                this.classList.remove('invalid');
+                error[i].classList.remove('visible');
+                errorIcon[i].classList.remove('visible');
+            }
+        })
     }
-
-    if (lastName === '') {
-        addError('lastname','Last Name is required');
-    }else{
-        removeError('lastname');
-    }
-
-    if (email === '') {
-        addError('email','Email is required');
-    }else if (!isValid(email)){
-        addError('email', 'Email is not valid');
-    }else{
-        removeError('email');
-    }
-    
-    if (password === '') {
-		addError('password','password is required');
-	} else {
-		removeError('password');
-	}
-    
-});
-
-
-function addError(field, text) {
-    const formControl = form[field].parentNode;
-    formControl.classList.add('error');
-    
-    const small = formControl.querySelector('small');
-    small.innerText = text;
 }
 
-function removeError(field) {
-    const formControl = form[field].parentNode;
-    formControl.classList.remove('error');
-}
-
-function isValid(email) {
-    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
-}
-
+validateInputs();

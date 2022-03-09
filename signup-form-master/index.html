@@ -3,9 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link rel="stylesheet" media="screen and (min-device-width: 1024px)" href="style.css">
-  <link rel="stylesheet" media="screen and (min-device-width: 375px) and (max-width: 1024px)" href="style_375.css">
-  
+  <link rel="stylesheet" href="./style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">  
   <title>Frontend Mentor | Intro component with sign up form</title>
@@ -14,60 +12,49 @@
 
 </head>
 <body>
-
-  <div class="content">
-        <div class="text">
-          <h1>Learn to code by <br> watching others</h1>
-          <p> See how experienced developers solve problems in real-time. <br> Watching scripted tutorials is great, 
-            but understanding how <br> developers think is invaluable.</p>
-        </div>
-        <div>
-          <div class="box">
-            <p><strong>Try it free 7 days</strong> then $20/mo. thereafter</p>
+ <div class="wrapper">
+   <section class="left">
+     <h1>Learn to code by watching others</h1>
+     <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
+      but understanding how developers think is invaluable.</p>
+   </section>
+   <section class="right">
+      <h2 class="heading"><span>Try it free 7 days</span> then $20/mo. thereafter</h2>
+      <div class="form-group">
+        <form id="form">
+          <div>
+            <input type="text" class="firstname" id="fname" placeholder="First Name">
+            <span><img src="./images/icon-error.svg" alt="error" class="error-icon"></span>
+            <span class="error">First name cannot be empty</span>
           </div>
-          <div class="form" >
-          <form class="form-box" id="form">
-                <div class="form-contents">
-                <input type="text" id="firstname" placeholder="First Name">
-                <img src="./images/icon-error.svg" alt="error-icon">
-                <small id="firstname"></small>
-                <br>
-              </div>
-              <div class="form-contents">
-                <input type="text" id="lastname" placeholder="Last Name">
-                <img src="./images/icon-error.svg" alt="error-icon">
-                <small id="lastname"></small>
-                <br>
-              </div>
-              <div class="form-contents">
-                <input class="email" type="email" id="email" placeholder="Email Address">
-                <img src="./images/icon-error.svg" alt="error-icon">
-                <small id="email"></small>
-                <br>
-              </div>
-              <div class="form-contents">
-                <input type="password" id="password" placeholder="Password">
-                <img src="./images/icon-error.svg" alt="error-icon">
-                <small id="password"></small>
-                <br>
-              </div>
-              <div class="form-contents">
-                <button type="submit">CLAIM YOUR FREE TRIAL</button>
-                <br>
-                <p>By clicking the button, you are agreeing to our <span style="color:hsl(0, 100%, 74%)"><strong>Terms and Services</strong></span></p>    
-              </div>
-            </div>
-          </form>
-        </div>
-        </div>
-  </div>
-  
+          <div>
+            <input type="text" class="lastname" id="lname" placeholder="Last Name">
+            <span><img src="./images/icon-error.svg" alt="error" class="error-icon"></span>
+            <span class="error">Last name cannot be empty</span>
+          </div>
+          <div>
+            <input type="email" class="email" id="email" placeholder="Email Address">
+            <span><img src="./images/icon-error.svg" alt="error" class="error-icon"></span>
+            <span class="error">Email Address cannot be empty</span>
+          </div>
+          <div>
+            <input type="password" class="pass" id="pass" placeholder="Password">
+            <span><img src="./images/icon-error.svg" alt="error" class="error-icon"></span>
+            <span class="error">Password cannot be empty</span>
+          </div>
+
+          <button class="btn btn-green" type="submit">Claim your free trial</button>
+          <p>By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
+        </form>
+      </div>
+   </section>
+ </div>
   <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="#">SABARI VASAN V</a>.
     </p>
   </footer> 
-  <script src="script.js"></script>
+  <script src="./script.js"></script>
 </body>
 </html>
